@@ -24,9 +24,9 @@ md_simple_editor = () ->
             else if option == 'md_h5'
                "##### "
             else if option == 'md_italic'
-               "_ _"
+               "_  _"
             else if option == 'md_bold'
-               "__ __"
+               "__  __"
             else if option == 'md_list-ul'
                "\n* "
             else if option == 'md_list-ol'

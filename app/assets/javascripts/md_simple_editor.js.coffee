@@ -28,9 +28,9 @@ md_simple_editor = () ->
             else if option == 'md_bold'
                "__bold__"
             else if option == 'md_list-ul'
-               "\n* "
+               "* "
             else if option == 'md_list-ol'
-               "\n1. "
+               "1. "
             else if option == 'md_indent'
                "> "
             else if option == 'md_underline'
@@ -40,9 +40,9 @@ md_simple_editor = () ->
             else if option == 'md_minus'
                "\n<hr>\n"
             else if option == 'md_link'
-              "\n[]()\n"
+              "[]()"
             else if option == 'md_camera-retro'
-              "\n![]()\n"
+              "![]()"
 
       textarea = $('#md-editor #md-text textarea')
       insertAtCaret(textarea.attr('id'), text)

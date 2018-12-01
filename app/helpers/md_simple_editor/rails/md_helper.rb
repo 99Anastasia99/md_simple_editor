@@ -12,13 +12,6 @@ module MdSimpleEditor
               content_tag(:br) +
               content_tag(:div, :id => 'md-text') do
                 yield
-              end +
-              content_tag(:div, class: 'panel panel-success preview-panel', hidden: true) do
-                content_tag(:div, class: 'panel-heading') do
-                  'Preview'
-                end +
-                    content_tag(:div, :id => 'md-preview', class: 'panel-body') do
-                    end
               end
         end
       end

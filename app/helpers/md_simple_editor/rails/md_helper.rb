@@ -7,7 +7,8 @@ module MdSimpleEditor
         @md_builder = MdBuilder.new(klass)
         content_tag(:div, :id => 'md-editor') do
           content_tag(:div, :class => 'btn-toolbar', role: 'toolbar') do
-            header_tags + text_tools + link_and_image_tools
+            header_tags + text_tools + link_and_image_tools +
+              content_tag(:br) +
           end +
               content_tag(:div, :id => 'md-text') do
                 yield

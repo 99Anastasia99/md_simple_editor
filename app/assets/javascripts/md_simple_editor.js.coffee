@@ -14,19 +14,19 @@ md_simple_editor = () ->
       option = option[0].toString()
 
       text = if option == 'md_h1'
-               "# "
+               "\n# "
             else if option == 'md_h2'
-               "## "
+               "\n## "
             else if option == 'md_h3'
-               "### "
+               "\n### "
             else if option == 'md_h4'
-               "#### "
+               "\n#### "
             else if option == 'md_h5'
-               "##### "
+               "\n##### "
             else if option == 'md_italic'
-               "_  _"
+               "_italic_"
             else if option == 'md_bold'
-               "__  __"
+               "__bold__"
             else if option == 'md_list-ul'
                "\n* "
             else if option == 'md_list-ol'
@@ -34,7 +34,7 @@ md_simple_editor = () ->
             else if option == 'md_indent'
                "> "
             else if option == 'md_underline'
-               "<u> </u>"
+               "<u>underline</u>"
             else if option == 'md_table'
                "\n|Header|Header|Header|\n|:------|:-------:|------:|\n|Left alignment|Centered|Right alignment|\n"
             else if option == 'md_minus'

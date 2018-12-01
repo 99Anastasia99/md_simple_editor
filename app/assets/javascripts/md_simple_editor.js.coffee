@@ -14,15 +14,15 @@ md_simple_editor = () ->
       option = option[0].toString()
 
       text = if option == 'md_h1'
-               "\n# "
+               "# "
             else if option == 'md_h2'
-               "\n## "
+               "## "
             else if option == 'md_h3'
-               "\n### "
+               "### "
             else if option == 'md_h4'
-               "\n#### "
+               "#### "
             else if option == 'md_h5'
-               "\n##### "
+               "##### "
             else if option == 'md_italic'
                "_italic_"
             else if option == 'md_bold'

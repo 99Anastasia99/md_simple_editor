@@ -14,58 +14,38 @@ md_simple_editor = () ->
       option = option[0].toString()
 
       text = if option == 'md_h1'
-               "# Your Title here"
+               "# "
             else if option == 'md_h2'
-               "## Your Title here"
+               "## "
             else if option == 'md_h3'
-               "### Your Title here"
+               "### "
             else if option == 'md_h4'
-               "#### Your Title here"
+               "#### "
             else if option == 'md_h5'
-               "##### Your Title here"
+               "##### "
             else if option == 'md_italic'
-               "_Your italic text here_"
+               "_ _"
             else if option == 'md_bold'
-               "__Your bold text here__"
+               "__ __"
             else if option == 'md_list-ul'
-               "\n\n* Item 1\n* Item 2\n* Item 3 \n\n<br>"
+               "\n* "
             else if option == 'md_list-ol'
-               "\n\n1. Item 1\n2. Item 2\n3. Item 3 \n\n<br> "
+               "\n1. "
             else if option == 'md_indent'
-               ">Your indented text here"
+               "> "
             else if option == 'md_underline'
-               "<u>Your undelined text here </u>"
+               "<u> </u>"
             else if option == 'md_table'
-               "\n|Header|Header|Header|\n|:------|:-------:|------:|\n|Left alignment|Centered|Right alignment|\n\n<br>"
+               "\n|Header|Header|Header|\n|:------|:-------:|------:|\n|Left alignment|Centered|Right alignment|\n"
             else if option == 'md_minus'
                "\n<hr>\n"
-            else if option == 'md_square'
-               "\n\t Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut aliquet velit. Nam fermentum, mi quis egestas ornare, massa velit pharetra ante, sed
-                      pellentesque tortor nisl non quam. Nunc eget egestas orci.\n\n<br> "
             else if option == 'md_link'
-              "\n[This is a link](http://google.com)\n"
+              "\n[]()\n"
             else if option == 'md_camera-retro'
-              "\n![Alt](https://www.google.com.co/images/srpr/logo11w.png)\n"
+              "\n![]()\n"
 
       textarea = $('#md-editor #md-text textarea')
       insertAtCaret(textarea.attr('id'), text)
-
-preview = ->
-  if $('#md-text').prop('hidden')
-    $('.preview_md').text('Preview')
-    $('#md-text').removeAttr('hidden')
-    $('.preview-panel').attr('hidden', 'true')
-    false
-  else
-    $.post(
-      '/md_simple_editor/preview',
-      {md: $('#md-text textarea').val()},
-      (data) ->
-        $('.preview_md').text('Editor')
-        $('#md-text').attr('hidden', 'true')
-        $('.preview-panel').removeAttr('hidden')
-        $('#md-preview').html(data)
-    )
 
 insertAtCaret = (areaId, text) ->
   txtarea = document.getElementById(areaId)

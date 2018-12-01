@@ -42,6 +42,17 @@ module MdSimpleEditor
               end
         end
       end
+      
+      def link_and_image_tools
+         content_tag(:div, :class => 'btn-group') do
+           button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_link") do
+             fa_icon 'link'
+           end +
+               button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_camera-retro") do
+                 fa_icon 'camera-retro'
+               end
+         end
+       end
 
       def text_tools
         content_tag(:div, :class => 'btn-group') do

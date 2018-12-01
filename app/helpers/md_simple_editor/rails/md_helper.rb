@@ -43,8 +43,6 @@ module MdSimpleEditor
         end
       end
 
-      dt
-
       def text_tools
         content_tag(:div, :class => 'btn-group') do
           button_tag(type: 'button', class: "#{@md_builder.default_class} md_italic") do

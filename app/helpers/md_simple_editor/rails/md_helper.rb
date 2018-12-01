@@ -17,19 +17,19 @@ module MdSimpleEditor
 
       def header_tags
         content_tag(:div, :class => 'btn-group') do
-          button_tag(type: 'button', class: "#{@md_builder.default_class} md_h1") do
+          button_tag(type: 'button', class: "btn btn-secondary md_h1") do
             content_tag(:strong, 'H1')
           end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h2") do
+              button_tag(type: 'button', class: "btn btn-secondary md_h2") do
                 content_tag(:strong, 'H2')
               end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h3") do
+              button_tag(type: 'button', class: "btn btn-secondary md_h3") do
                 content_tag(:strong, 'H3')
               end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h4") do
+              button_tag(type: 'button', class: "btn btn-secondary md_h4") do
                 content_tag(:strong, 'H4')
               end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h5") do
+              button_tag(type: 'button', class: "btn btn-secondary md_h5") do
                 content_tag(:strong, 'H5')
               end
         end
@@ -37,10 +37,10 @@ module MdSimpleEditor
       
       def link_and_image_tools
          content_tag(:div, :class => 'btn-group') do
-           button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_link") do
+           button_tag(:type => 'button', :class => "btn btn-secondary md_link") do
              fa_icon 'link'
            end +
-               button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_camera-retro") do
+               button_tag(:type => 'button', :class => "btn btn-secondary md_camera-retro") do
                  fa_icon 'camera-retro'
                end
          end
@@ -48,28 +48,28 @@ module MdSimpleEditor
 
       def text_tools
         content_tag(:div, :class => 'btn-group') do
-          button_tag(type: 'button', class: "#{@md_builder.default_class} md_italic") do
+          button_tag(type: 'button', class: "btn btn-secondary md_italic") do
             fa_icon 'italic'
           end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_bold") do
+              button_tag(type: 'button', class: "btn btn-secondary md_bold") do
                 fa_icon 'bold'
               end +
-              button_tag(:type => 'button', class: "#{@md_builder.default_class} md_list-ul") do
+              button_tag(:type => 'button', class: "btn btn-secondary md_list-ul") do
                 fa_icon 'list-ul'
               end +
-              button_tag(:type => 'button', class: "#{@md_builder.default_class} md_list-ol") do
+              button_tag(:type => 'button', class: "btn btn-secondary md_list-ol") do
                 fa_icon 'list-ol'
               end +
-              button_tag(:type => 'button', class: "#{@md_builder.default_class} md_indent") do
+              button_tag(:type => 'button', class: "btn btn-secondary md_indent") do
                 fa_icon 'indent'
               end +
-              button_tag(:type => 'button', class: "#{@md_builder.default_class} md_underline") do
+              button_tag(:type => 'button', class: "btn btn-secondary md_underline") do
                 fa_icon 'underline'
               end +
-              button_tag(:type => 'button', class: "#{@md_builder.default_class} md_table") do
+              button_tag(:type => 'button', class: "btn btn-secondary md_table") do
                 fa_icon 'table'
               end +
-              button_tag(:type => 'button', class: "#{@md_builder.default_class} md_minus") do
+              button_tag(:type => 'button', class: "btn btn-secondary md_minus") do
                 fa_icon 'minus'
               end
         end

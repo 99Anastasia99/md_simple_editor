@@ -7,12 +7,7 @@ module MdSimpleEditor
         @md_builder = MdBuilder.new(klass)
         content_tag(:div, :id => 'md-editor') do
           content_tag(:div, :class => 'btn-toolbar', role: 'toolbar') do
-            header_tags + text_tools + link_and_image_tools +
-                content_tag(:div, class: 'btn-group pull-righ') do
-                  button_tag(:type => 'button', :class => "#{@md_builder.default_class} btn-primary preview_md") do
-                    'Preview'
-                  end
-                end
+            header_tags + text_tools + link_and_image_tools
           end +
               content_tag(:br) +
               content_tag(:div, :id => 'md-text') do
@@ -48,16 +43,7 @@ module MdSimpleEditor
         end
       end
 
-      def link_and_image_tools
-        content_tag(:div, :class => 'btn-group') do
-          button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_link") do
-            fa_icon 'link'
-          end +
-              button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_camera-retro") do
-                fa_icon 'camera-retro'
-              end
-        end
-      end
+      dt
 
       def text_tools
         content_tag(:div, :class => 'btn-group') do
